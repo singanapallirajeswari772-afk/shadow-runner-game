@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Mission | Temple Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="stat"><span>🪙</span><div><small>COINS</small><strong id="coins">0</strong></div></div>
+      <div class="stat"><span>🏃</span><div><small>DISTANCE</small><strong><b id="distance">0</b> m</strong></div></div>
+      <button id="pauseBtn" class="pause" aria-label="Pause game">Ⅱ</button>
+    </header>
+
+    <section class="scene" id="scene" aria-label="Temple running game">
+      <div class="sun"></div>
+      <div class="temple">𓂀<br><span>LOST TEMPLE</span></div>
+      <div class="mountain mountain-back"></div>
+      <div class="jungle jungle-left">🌴 🌿 🌴</div>
+      <div class="jungle jungle-right">🌴 🌿 🌴</div>
+      <div class="bridge"></div>
+      <div class="lane lane-left"></div><div class="lane lane-right"></div>
+      <div class="coin-track" id="coinTrack"></div>
+      <div class="obstacle" id="obstacle">🪨</div>
+      <div class="runner" id="runner" aria-label="Runner">🏃🏻‍♀️</div>
+      <div class="chaser" id="chaser">👹</div>
+      <div class="toast" id="toast">Swipe or use arrow keys to run!</div>
+      <div class="overlay" id="overlay">
+        <div class="card">
+          <div class="badge">⚡ ENDLESS ADVENTURE</div>
+          <h1 id="overlayTitle">SHADOW<br><em>MISSION</em></h1>
+          <p id="overlayText">Run through the lost temple, collect golden coins and escape the shadow beast!</p>
+          <div class="instructions">
+            <span>⬅️ ➡️ <small>Change lane</small></span>
+            <span>⬆️ <small>Jump</small></span>
+            <span>⬇️ <small>Slide</small></span>
+          </div>
+          <button id="startBtn" class="start">START RUN ▶</button>
+          <p class="hint">Keyboard: ← → ↑ ↓ &nbsp; • &nbsp; Mobile: swipe</p>
+        </div>
+      </div>
+      <div class="gameover hidden" id="gameover">
+        <div class="card">
+          <div class="badge">RUN COMPLETE</div>
+          <h2>GAME OVER</h2>
+          <p>You ran <strong id="finalDistance">0</strong> metres and collected <strong id="finalCoins">0</strong> coins.</p>
+          <button id="restartBtn" class="start">RUN AGAIN ↻</button>
+        </div>
+      </div>
+    </section>
+    <footer><span>SHADOW MISSION</span><span>✦ Find the golden path ✦</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
